@@ -1,0 +1,102 @@
+﻿body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #213e6a, #e4dbc7, white);
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+}
+/*  root use:  global CSS variable=>   {  color: var(--sand); }*/
+:root {
+    --sand: #e4dbc7;
+    --seafoam: #a9ece3;
+    --seafoam-light: #d7f4f0;
+    --brown: #8c6100;
+    --sky-blue: #dcfaf6;
+}
+
+.timer {
+    background: var(--seafoam-light);
+    width: 100vw;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    font-size: 2em;
+    
+}
+button {
+    padding: 5px 10px 5px 10px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--brown);
+}
+
+main {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#e5e1e6, transparent);
+}
+.gameboard {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( -45deg, #ff99003b, #006eff52);
+}
+.row {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.cell {
+    background: var(--seafoam-light);
+    margin: 2px;
+    border: 1px solid var(--brown);
+    height: 10vw;
+    width: 10vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 2.5em;
+    
+}
+
+.empty {
+    opacity: 0.5;
+    border: 1px solid lime;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(240, 240, 255, 0.5);
+}
+
+footer h3 {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* MOBILE */
+
+@media all and (max-width: 799px) and (min-width: 220px) {
+.cell {
+    width: 20vw;
+    height: 20vw;
+   }
+
+}
